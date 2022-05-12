@@ -34,13 +34,15 @@ app.use('/submit', submitRouter);
 
 
 // INITIAL CLIENT AGE RELOAD
-// app.get('/', (req, res) => {
-//   // what to send to the client when they access the web app URL
-//   // send them the main index.html file
-//   res.status(200);
-//   return res.sendFile(path.resolve(__dirname, '../src/index.html'))
-// });
-app.use(express.static(path.resolve(__dirname, '../dist')));
+app.use(express.static('dist'));
+
+app.get('/', (req, res) => {
+  console.log('client is visiting the root endpoint');
+  res.status(200);
+  res.setHeader('Content-Type', 'text/html'); 
+  res.sendFile(path.resolve(__dirname, '../dist/main.js'));
+});
+
 
 // CATCH-ALL ROUTE HANDLER FOR UNKNOWN ROUTES
 app.use((req, res) => {

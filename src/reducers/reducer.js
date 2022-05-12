@@ -1,6 +1,5 @@
 // IMPORT ACTION TYPES
 import * as type from '../actions/actionTypes.js'
-import fetch from 'node-fetch';
 
 
 // DECLARE INITIATE STATE 

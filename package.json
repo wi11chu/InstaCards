@@ -1,5 +1,5 @@
 {
-  "name": "solo-project-wc-1130am",
+  "name": "InstaCards",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,13 +17,10 @@
     "mongoose": "^6.2.7",
     "node-fetch": "^3.2.3",
     "nodemon": "^2.0.15",
-    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.1",
     "webpack-dev-server": "^4.7.4"
   },
   "devDependencies": {

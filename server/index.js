@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 
 // CONNECT TO THE MONGOOSE DATABASE
-const mongoURI = 'mongodb+srv://wi11chu:mdb1705425@cluster0.wpts4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const mongoURI = 'mongodb+srv://wi11chu:7K0Xjjg6R9gLbPAp@cluster0.wpts4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 mongoose.connect(mongoURI);
 
 
@@ -19,18 +19,10 @@ app.use(express.json());
 
 
 // REQUIRING IN THE ROUTERS MODULES
-const deleteRouter = require('./routers/delete');
-const startResetRouter = require('./routers/startReset');
-const submitRouter = require('./routers/submit');
-
+const cardsRouter = require('./routers/cardsRouter');
 
 // ROUTE HANDLERS
-// clicking the delete button will send request to
-app.use('/delete', deleteRouter);
-// clicking the startReset button will send request to
-app.use('/startReset', startResetRouter);
-// clicking the submit button will send request to
-app.use('/submit', submitRouter);
+app.use('/api', cardsRouter)
 
 
 // INITIAL CLIENT AGE RELOAD

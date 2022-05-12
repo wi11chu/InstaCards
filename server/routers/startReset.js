@@ -28,7 +28,7 @@ const getAllCards = (req, res, next) => {
 // ROUTER FUNCTION AND MIDDLEWARE CHAIN
 router.get('/', getAllCards, (req, res) => {
   res.status(200);
-  return res.json(res.locals.allCards);
+  return res.send(res.locals.allCards);
 })
 
 

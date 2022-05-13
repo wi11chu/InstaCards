@@ -1,5 +1,5 @@
 // IMPORT ACTION TYPES
-import * as type from '../actions/actionTypes.js'
+import * as type from '../actions/actionTypes'
 
 
 // DECLARE INITIATE STATE 

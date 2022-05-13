@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 
-class AddCardField extends Component {
-  render() {
+const AddCardField = (props) => {
     return (
-      <form onSubmit={createUpdateCard}>
+      <form onSubmit={props.createUpdateCard}>
         <input // input is inline
-          value={newFrontText}
-          onChange={e => this.props.newFrontTextAC(e.target.value)}
+          value={props.newFrontText}
+          onChange={e => props.newFrontTextAC(e.target.value)}
         />
         <input
-          value={newBackText}
-          onChange={e => this.props.newBackTextAC(e.target.value)}
+          value={props.newBackText}
+          onChange={e => props.newBackTextAC(e.target.value)}
         />
         <button type="submit">'Submit'</button>
       </form>
     )
-  }
 }
 
 

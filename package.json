@@ -1,34 +1,38 @@
 {
-  "name": "InstaCards",
+  "name": "instaCards",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index",
   "scripts": {
     "build": "webpack",
-    "start": "nodemon server/index.js",
-    "dev": "webpack-dev-server"
+    "start": "nodemon server/index",
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open --hot --progress --color \" \"nodemon ./server/index\""
   },
   "keywords": [],
-  "author": "",
+  "author": "William Chu",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
-    "html-webpack-plugin": "^5.5.0",
     "mongoose": "^6.2.7",
     "node-fetch": "^3.2.3",
-    "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
-    "redux": "^4.1.2",
-    "webpack-dev-server": "^4.7.4"
+    "redux": "^4.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
+    "css-loader": "^6.7.1",
+    "concurrently": "^7.1.0",
     "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "style-loader": "^3.3.1",
+    "webpack-dev-server": "^4.7.4",
+    "nodemon": "^2.0.15",
+    "postcss-loader": "^6.2.1",
+    "html-webpack-plugin": "^5.5.0"
   }
 }

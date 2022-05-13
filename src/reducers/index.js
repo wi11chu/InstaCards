@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 
 
 // IMPORT FLASHCARDREDUCER 
-import flashchardReducer from './reducer.js';
+import flashchardReducer from './reducer';
 
 
 export default combineReducers({

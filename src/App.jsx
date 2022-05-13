@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import MainDisplay from './containers/MainDisplay.jsx';
-import Box from './containers/Box.jsx';
+import MainDisplay from './containers/MainDisplay';
+// import Box from './containers/Box';
 
-class App extends Component {
+const App = () => {
 
-  render(){
     return ( 
       <section>
-        {/* <MainDisplay/> */}
-        <Box/>
+        <MainDisplay/>
+        {/* <Box/> */}
       </section>
     )
-  }
 }
 
 export default App;

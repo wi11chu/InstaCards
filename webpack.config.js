@@ -1,28 +1,21 @@
 const path = require("path");
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "/src/index.js",
-
+  entry: "/src/index",
   output: { path: path.resolve(__dirname, "dist") },
-
   mode: 'development',
-
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //    title: 'Development',
-  //    template: 'src/index.html',
-  //    inject: "body"
-  //   }),
-  // ],
-
+  plugins: [
+    new HtmlWebpackPlugin({
+     template: path.join(__dirname, 'src', 'index.html'),
+    }),
+  ],
   devServer: { 
     static: {
       directory: path.resolve(__dirname, 'dist'),
       publicPath: '/dist',
     },
   },
-
   module: {
     rules: [
       {
@@ -35,6 +28,11 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.s?css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        exclude: /node_modules/,
+      }
     ],
   },
   resolve: {
